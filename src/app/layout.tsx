@@ -8,6 +8,7 @@ import "@/styles/globals.css";
 import { ColorSchemeScript } from "@mantine/core";
 import "@mantine/core/styles.css";
 import Head from "./head";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = generateMetadata();
 
@@ -37,7 +38,8 @@ export default function RootLayout({
                     {children}
                     <ClientProviders />
                 </Providers>
+                <Analytics />
             </body>
         </html>
     );
-}
+};
